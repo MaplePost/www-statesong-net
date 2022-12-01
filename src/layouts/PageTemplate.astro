@@ -1,0 +1,30 @@
+---
+// PageTemplate for StateSong.net
+import "@fontsource/fira-code";
+import "@fontsource/montserrat"
+const { title, description, themeColor } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html class="flex flex-col w-full h-full flex-grow no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content={themeColor} />
+  </head>
+
+  <body class="flex flex-col flex-grow w-full h-full bg-neutral-100">
+    <div class="container h-full mx-auto">
+      <!--[if IE]>
+        <p class="browserupgrade">
+          You are using an <strong>outdated</strong> browser. Please
+          <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+          your experience and security.
+        </p>
+		  <![endif]-->
+      <slot />
+    </div>
+  </body>
+</html>
